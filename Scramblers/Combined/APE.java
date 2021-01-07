@@ -10,12 +10,12 @@ public class APE extends producer{
     String[] english=new String[AlphabetEnglishL.length()];
     String[] numerics=new String[Numerics.length()];
     
-    String VowR="AO";
+    String VowR="AOU";
     String VowE="EY";
-    String VowN="UI";
-    String ConR="BCHG";
+    String VowN="I";
+    String ConR="BCHGK";
     String ConE="DTPR";
-    String ConN="KJ";
+    String ConN="J";
     
     String Vow="aeoiuy";//гласная
     String Con="bcdpgrthjk";//согласная
@@ -33,21 +33,21 @@ public class APE extends producer{
     
     private String WordForm(int Language){//1-rus, 2-eng, 5-nums
         Random r = new Random(TempKey);
-        TempKey=r.nextInt(9999)+1;
+        TempKey++;
         char v='1',v1='1',v2='1',c='1',c1='1',c2='1',v3='1';
         String V,V1,V2,V3,C,C1,C2;
         switch(Language){
             case 1:{
-                v=VowR.charAt(r.nextInt(2));
-                c=ConR.charAt(r.nextInt(3));break;
+                v=VowR.charAt(r.nextInt(3));
+                c=ConR.charAt(r.nextInt(5));break;
             }
             case 2 : {
                 v=VowE.charAt(r.nextInt(2));
-                c=ConE.charAt(r.nextInt(2));break;
+                c=ConE.charAt(r.nextInt(4));break;
             }
             case 5 : {
-                c=ConN.charAt(r.nextInt(2));
-                v=VowN.charAt(r.nextInt(2));break;
+                c=ConN.charAt(r.nextInt(1));
+                v=VowN.charAt(r.nextInt(1));break;
             }
         }
         v1=Vow.charAt(r.nextInt(6));
