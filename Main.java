@@ -24,7 +24,7 @@ public class Main {
         else MESSAGE=module.decrypt(MESSAGE,Integer.parseInt(METHOD),KEY1,KEY2);
 
         FileWriter outPut=new FileWriter(fileName);
-        outPut.write(MESSAGE+"\n"+KEY1+"\n"+KEY2);
+        outPut.write(MESSAGE);
         outPut.close();
     }
 }
