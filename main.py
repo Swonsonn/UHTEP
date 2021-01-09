@@ -2,7 +2,6 @@ from tkinter import *
 from tkinter.tix import *
 from os import path
 from os import system
-import pickle
 
 window = Tk()
 window['bg'] = "grey"
