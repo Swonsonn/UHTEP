@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        //Bless rng
         String fileName=args[0];
         File file=new File(fileName);
         Scanner inPut=new Scanner(file);
