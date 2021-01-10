@@ -1,17 +1,17 @@
-from tkinter import *
+﻿from tkinter import *
 from tkinter.tix import *
 from os import path
 from os import system
 
 window = Tk()
 window['bg'] = "grey"
+window.iconbitmap('ico.ico')
 window.title("Ukrainian High-Tech Encoder Program")
-window.iconbitmap("ico.ico")
 window.geometry('750x500')
 window.resizable( width = False, height = False)
 
 program_mode = StringVar()
-program_mode.set("Crypt")
+program_mode.set("crypt")
 chose_alg = IntVar()
 chose_alg.set(1)
 
@@ -29,11 +29,11 @@ label_output.place(relx = 0.0535, rely = 0.35, relwidth = 0.3, relheight = 0.051
 textOutput = Text(frame, width = 44, height = 5)
 textOutput.place(relx = 0.0525, rely = 0.4, relwidth = 0.9, relheight = 0.25)
 
-label1_1 = Label(frame, text = 'Key 1:')
+label1_1 = Label(frame, text = 'Key 1')
 label1_1.place(relx = 0.051, rely = 0.67)
 key1 = Entry(frame)
 key1.place(relx = 0.2, rely = 0.67, relwidth = 0.59, relheight = 0.05)
-label1_2 = Label(frame, text = 'Key 2:')
+label1_2 = Label(frame, text = 'Key 2')
 label1_2.place(relx = 0.051, rely = 0.75)
 key2 = Entry(frame, state = DISABLED )
 key2.place(relx = 0.2, rely = 0.75, relwidth = 0.59, relheight = 0.05)
@@ -72,8 +72,8 @@ buttonClear.place(relx = 0.55, rely = 0.84)
 
 frame_change = Frame(window, bg = 'grey79')
 frame_change.place(relx = 0.58, rely = 0.05, relwidth = 0.395, relheight = 0.1)
-radio_Crypt = Radiobutton(frame_change ,text = 'Crypt message', variable = program_mode, value = 'Crypt')
-radio_Decrypt = Radiobutton(frame_change ,text = 'Decrypt message', variable = program_mode, value = 'Decrypt')
+radio_Crypt = Radiobutton(frame_change ,text = 'Crypt message', variable = program_mode, value = 'crypt')
+radio_Decrypt = Radiobutton(frame_change ,text = 'Decrypt message', variable = program_mode, value = 'decrypt')
 radio_Crypt.place(relx = 0.05, rely = 0.3)
 radio_Decrypt.place(relx = 0.53, rely = 0.3)
 
@@ -107,12 +107,12 @@ label3 = Label(frame_alg, text = 'Combined methods:')
 label3.place(relx = 0.05, rely = 0.6, relwidth = 0.9)
 radio_Com_1 = Radiobutton(frame_alg, text = 'Super ID', bg = 'grey79', variable = chose_alg, value = 6, command = radio_event)
 radio_Com_1.place(relx = 0.05, rely = 0.68)
-radio_Com_2 = Radiobutton(frame_alg, text = 'Heraklez', bg = 'grey79', variable = chose_alg, value = 7, command = radio_event)
+radio_Com_2 = Radiobutton(frame_alg, text = 'Heraklesz', bg = 'grey79', variable = chose_alg, value = 7, command = radio_event)
 radio_Com_2.place(relx = 0.05, rely = 0.76)
 radio_Com_3 = Radiobutton(frame_alg, text = 'APE', bg = 'grey79', variable = chose_alg, value = 8, command = radio_event)
 radio_Com_3.place(relx = 0.05, rely = 0.84)
 
-authors = Label(frame_alg, text = 'Made by Swonsonn and 愛てる\nTested by sup4\n\tStable version 1.1', bg = 'grey79')
+authors = Label(frame_alg, text = 'Made by Swonsonn and 愛てる\nTested by sup4\n\tRelease version 1.1', bg = 'grey79')
 authors.place(relx = 0.4, rely = 0.85)
 
 window.mainloop()
